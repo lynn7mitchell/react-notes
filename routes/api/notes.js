@@ -16,7 +16,8 @@ const express = require('express');
     // })
 
 
-    app.post("/api/note", (req, res)=>{
+    app.post("/api/notes", (req, res)=>{
+        console.log("here")
         const note ={
             title: req.body.title,
             content: req.body.content

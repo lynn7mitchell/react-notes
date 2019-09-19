@@ -30,13 +30,17 @@ export class NewNote extends Component {
             content: this.state.noteContent
           };
       
-          API.saveNote(newNote).then(() =>
-            API.getNote().then(res =>
-              this.setState({
-                notes: res.data
-              })
-            )
-          );
+        //   API.saveNote(newNote).then(() =>
+        //     API.getNote().then(res =>
+        //       this.setState({
+        //         notes: res.data
+        //       })
+        //     )
+        //   );
+
+        API.saveNote(newNote)
+        .then(console.log("worked"))
+        .catch((err)=>console.log(err))
         
       }
     
